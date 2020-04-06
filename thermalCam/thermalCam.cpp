@@ -78,7 +78,7 @@ void loop() {
 	int x, y, n;
 	n = 3;
 	x = y= 256;
-	unsigned char *data = stbi_load("test.bmp", &x, &y, &n, 1);
+	unsigned char *data = stbi_load("test.bmp", &x, &y, &n, 0);
 
 	if (data == NULL) printf("Loading failed\n");
 
