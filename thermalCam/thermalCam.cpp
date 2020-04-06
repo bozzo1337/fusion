@@ -102,7 +102,7 @@ void loop() {
 		for (; _x < maxX; _x++) {
 			for (; _y < maxY; _y++) {
 				if (pixelTable[i] > 15 &&  pixelTable[i] < 30 ) {
-					data[((_y*256)+_x)*3] = value;
+					//data[((_y*256)+_x)*3] = value;
 				}
 				//if (pixelTable[i] >= 20 &&  pixelTable[i] < 40 )
 				//	data[((_x*256)+_y)*3] = 30 + (int) (11 * (pixelTable[i]) - 20);
