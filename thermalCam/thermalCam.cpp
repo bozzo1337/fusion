@@ -78,7 +78,7 @@ void loop() {
 	int x, y, n;
 	n = 3;
 	x = y= 256;
-	unsigned char *data = stbi_load("test.bmp", &x, &y, &n, 0);
+	unsigned char *data = stbi_load("test.bmp", &x, &y, &n, 3);
 
 	if (data == NULL) printf("Loading failed\n");
 
@@ -102,7 +102,7 @@ void loop() {
 		for (; _x < maxX; _x++) {
 			for (; _y < maxY; _y++) {
 				if (pixelTable[i] > 15 &&  pixelTable[i] < 30 ) {
-					//data[((_y*256)+_x)*3] = value;
+					data[((_y*256)+_x)*3] = value;
 				}
 				//if (pixelTable[i] >= 20 &&  pixelTable[i] < 40 )
 				//	data[((_x*256)+_y)*3] = 30 + (int) (11 * (pixelTable[i]) - 20);
