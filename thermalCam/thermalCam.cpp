@@ -118,13 +118,13 @@ void loop() {
 	}
 	stbi_write_bmp("IR.bmp", 8, 8, 1, pixelTable);
 	stbi_write_bmp("testIR.bmp", x, y, n, data);
-	string pdata = "person,device=pi value=";
+	std::string pdata = "person,device=pi value=";
 	if (pcount > 6) {
 		pdata += "1";
 	} else {
 		pdata += "0";
 	}
-	ofstream myfile("persondata.txt", std::ofstream::trunc);
+	std::ofstream myfile("persondata.txt", std::ofstream::trunc);
 	myfile << pdata;
 	myfile.close();
 
