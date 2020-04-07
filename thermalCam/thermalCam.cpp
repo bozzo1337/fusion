@@ -124,9 +124,8 @@ void loop() {
 	} else {
 		pdata += "0";
 	}
-	ofstream myfile;
-	myfile.open("persondata.txt");
-	myfile < pdata;
+	ofstream myfile("persondata.txt", std::ofstream::trunc);
+	myfile << pdata;
 	myfile.close();
 
 	//stbi_write_bmp("output/"+inc+".bmp", x, y, n, data);
