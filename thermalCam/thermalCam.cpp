@@ -35,6 +35,8 @@
 //#include <Wire.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <iostream>
+#include <fstream>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -85,9 +87,12 @@ void loop() {
 	// loop through the table of mapped values and print a character corresponding to each
 	// pixel's temperature. Add a space between each. Start a new line every 8 in order to
 	// create an 8x8 grid
+	int pcount = 0;
 	for(unsigned char i = 0; i < 64; i++) {
 		printf("%f ",pixelTable[i]);
-
+		if (pixelTable[i] > 25) {
+			pcount++;
+		}
 		//int _x = 224 - ((i % 8) * 32);
 		int _x = 224 - ((i/8) * 32);
 		int maxX = _x + 32;
@@ -102,7 +107,7 @@ void loop() {
 		for (; _x < maxX; _x++) {
 			for (; _y < maxY; _y++) {
 				if (pixelTable[i] > 15 &&  pixelTable[i] < 30 ) {
-					//data[((_y*256)+_x)*3] = value;
+					data[((_y*256)+_x)*3] = value;
 				}
 				//if (pixelTable[i] >= 20 &&  pixelTable[i] < 40 )
 				//	data[((_x*256)+_y)*3] = 30 + (int) (11 * (pixelTable[i]) - 20);
@@ -113,6 +118,17 @@ void loop() {
 	}
 	stbi_write_bmp("IR.bmp", 8, 8, 1, pixelTable);
 	stbi_write_bmp("testIR.bmp", x, y, n, data);
+	string pdata = "person,device=pi value=";
+	if (pcount > 6) {
+		pdata += "1";
+	} else {
+		pdata += "0";
+	}
+	ofstream myfile;
+	myfile.open("persondata.txt");
+	myfile < pdata;
+	myfile.close();
+
 	//stbi_write_bmp("output/"+inc+".bmp", x, y, n, data);
 
 	// in between updates, throw a few linefeeds to visually separate the grids. If you're using
