@@ -32,8 +32,8 @@ Une machine distante permet l'hébergement d'une base de données temporelles In
 Ce programme effectue une prise d'image avec les deux caméras, puis modifie l'image "classique" pour faire apparaître les zones de chaleur. On y trouve également un test de détection de personnes trivial, à savoir si plus de 10% des pixels voient leur température au dessus de 25°, alors on considère une personne détectée.
 Enfin, les fichiers de sortie sont créés, l'un étant l'image modifiée, l'autre un fichier txt dans un format approprié à l'insertion dans une base de données InfluxDB.
 
-**Machine distante** :
-	- Script bash subscript.sh
+**Machine distante :**
+- Script bash subscript.sh
 
 *Détails de subscript.sh :*
 - `x=1`
