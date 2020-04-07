@@ -1,6 +1,6 @@
 # Fusion
 Projet M2M : fusion d'informations.
-Ce projet a pour but d'exploiter à la fois une caméra classique ainsi qu'une caméra infrarouge afin de permettre l'identification de présence de personne dans un lieu donné. Notre produit est basé sur un Raspberry Pi équipé de deux caméras. Les deux scripts présents (fusion.sh & subscript.sh) sont exécutés respectivement sur le Raspberry et sur le machine distante.
+Ce projet a pour but d'exploiter à la fois une caméra classique ainsi qu'une caméra infrarouge afin de permettre l'identification de présence de personne dans un lieu donné. Notre produit est basé sur un Raspberry Pi équipé de deux caméras. Les deux scripts présents (fusion.sh & subscript.sh) sont exécutés respectivement sur le Raspberry et sur la machine distante.
 
 # Authors
 MULLER Lucie, LONGA Benjamin
