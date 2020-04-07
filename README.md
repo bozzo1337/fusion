@@ -6,6 +6,6 @@ Ce projet a pour but d'exploiter à la fois une caméra classique ainsi qu'une c
 MULLER Lucie, LONGA Benjamin
 
 # Documents
-Présentation du projet : https://tinyurl.com/rela2os
-Vidéo de démonstration : https://youtu.be/1KrN_73An1M
-Rapport technique, fiches ACV, Privacy & Security : dossier docs
+- Présentation du projet : https://tinyurl.com/rela2os
+- Vidéo de démonstration : https://youtu.be/1KrN_73An1M
+- Rapport technique, fiches ACV, Privacy & Security : dossier *docs*
